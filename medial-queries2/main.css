@@ -1,3 +1,76 @@
 body {
   background: papayawhip;
 }
+.a, .c, .d, .e, .f, .g {
+  border: 1px solid black;
+}
+/* .container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.a {
+  min-height: 20vh;
+  min-width: 20vh;
+  flex-grow: 1;
+}
+.b {
+  background-color: aqua;
+  min-height: 90vh;
+  min-width: 40vh;
+  flex-grow: 2;
+}
+.c, .d, .e {
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 32%;
+  background-color: darkgreen;
+} */
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 02fr 1.5fr 1.2fr .8fr;
+  grid-template-areas: 
+  "a a a"
+  "b b b"
+  "c d e"
+  "f f f";
+  gap: 0.2rem;
+  
+}
+.a {
+  background-color: chocolate;
+  grid-area: a;
+}
+.b {
+  background-color: blue;
+  grid-area: b;
+}
+.c {
+  background-color: crimson;
+  grid-area: c;
+}
+.d {
+  background-color: cornflowerblue;
+  grid-area: d;
+}
+.e {
+  background-color: coral;
+  grid-area: e;
+}
+.f {
+  background-color: blueviolet;
+  grid-area: f;
+}
+@media (min-width: 550px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 02fr 1.5fr 1.2fr;
+    grid-template-areas: 
+    "a a a a"
+    "b b b f"
+    "c d e f";
+  }
+}
